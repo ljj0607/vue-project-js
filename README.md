@@ -23,3 +23,12 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### 组件通信
+```
+父子： props、$attrs、$refs、$children
+子父：$emit("xx")、@xx
+兄弟： $parent
+祖代后代：provide、inject
+任意关系：$bus、$root、vuex
+```

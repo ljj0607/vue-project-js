@@ -16,6 +16,10 @@
 import KInput from "./KInput";
 import KFormItem from "./KFormItem";
 import KForm from "./KForm";
+
+import Notice from '../Notice'
+import create from '../../utils/create.js'
+
 export default {
   name: "index",
   components: {
@@ -41,12 +45,13 @@ export default {
   },
   methods: {
       login() {
+        console.log(this.$notice)
           this.$refs.loginForm.validate(isValid => {
-              console.log(isValid)
+            create(Notice, {
+                title: '错误提示',
+                message: isValid ? '请登录' : '校验失败'
+              }).show()
           })
-        //   this.$refs.loginForm.validate(isValid => {
-        //       console.log(isValid)
-        //   })
       }
   }
 };
