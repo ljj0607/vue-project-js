@@ -3,6 +3,12 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
+      <!-- mutations -->
+      <p @click="$store.commit('add')">counter: {{$store.state.counter}}</p>
+      <!-- actions -->
+      <p @click="$store.dispatch('add')">counter: {{$store.state.counter}}</p>
+      <!-- getters -->
+      <p>double：{{$store.getters.doubleCounter}}</p>
     </div>
     <router-view />
   </div>

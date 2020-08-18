@@ -5,7 +5,8 @@ import Element from 'element-ui'
 // import router from './router'
 import router from './krouter'
 
-import store from './store'
+// import store from './store'
+import store from './Kstore'
 
 Vue.config.productionTip = false
 
